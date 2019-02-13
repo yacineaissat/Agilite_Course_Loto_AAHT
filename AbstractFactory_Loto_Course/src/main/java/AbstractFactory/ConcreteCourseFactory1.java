@@ -47,5 +47,4 @@ public class ConcreteCourseFactory1 extends AbstractCourseFactory{
 			System.out.println("Course de voitures - Votre gain est de : " + course.calculerGain(((Joueur) participant).getJeu()));
 		}
 	}
-
 }

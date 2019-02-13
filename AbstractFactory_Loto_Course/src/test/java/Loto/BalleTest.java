@@ -8,31 +8,19 @@ public class BalleTest {
  protected Balle balle1 = new Balle("classique");
  protected Balle balle2 = new Balle(5, "classique");
  
- /**
-  * Constructeur de la classe-test BalleTest
-  */
  public BalleTest() {
  }
- /**
-  * Met en place les engagements.
-  *
-  * Méthode appelée avant chaque appel de méthode de test.
-  */
+
  @Before
  public void setUp() // throws java.lang.Exception
  {
   balle1 = new Balle("classique");
   balle2 = new Balle(5, "classique");
  }
- /**
-  * Supprime les engagements
-  *
-  * Méthode appelée après chaque appel de méthode de test.
-  */
+
  @After
- public void tearDown() // throws java.lang.Exception
+ public void tearDown()
  {
-  // Libérez ici les ressources engagées par setUp()
  }
  @Test
  public void testNumeroGet() {
@@ -51,13 +39,12 @@ public class BalleTest {
   assertEquals("rouge", balle1.getCouleur());
   assertEquals("rouge", balle2.getCouleur());
  }
- // TP2 Couverture de test
- // Test des Getters
+
  @Test
  public void testGetNumero() {
   Assert.assertEquals(5, balle2.getNumero());
  }
- // Test des Setters
+
  @Test
  public void testSetNumero() {
   balle2.setNumero(15);

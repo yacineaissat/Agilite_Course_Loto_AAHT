@@ -7,7 +7,6 @@ public class Joueur extends CourseObserver
 {
 	private String ballesAJouer;
 	private Balle [] jeu = new Balle [6];
-    private Loto loto;
     private static int idJoueur = 0;
     private int id;
     
@@ -21,14 +20,12 @@ public class Joueur extends CourseObserver
     	
     }
     
-    public Joueur(int test)
-    {
+    public Joueur(int test){
     	id = idJoueur;
     	idJoueur += 1;
     	for (int i = 1; i<6;i++) {
     		jeu[i] = new Balle("classique");
     	}
-    	
     }
     
     public Balle[] creerJeu(Balle[] tirage) {
@@ -38,11 +35,17 @@ public class Joueur extends CourseObserver
 	    	ballesAJouer += " " + b.getNumero();
 	    }
 	    
-	    //Inversion de l'affichage
-	    String ballesAAfficher = "";
-	    ballesAAfficher = ballesAJouer.substring(4)+ballesAJouer.substring(0,4);
+	    //Inversion de l'affichage pour ne pas afficher dans l'ordre le classement
+	    String ballesAAfficher[]  = ballesAJouer.split(" ");
 	    
-	    System.out.println("Voici les numéros de dossards des coureurs : " + ballesAAfficher);
+	    System.out.println("Voici les numéros de dossards des coureurs : " 
+	    + ballesAAfficher[1] + " "
+	    + ballesAAfficher[3] + " "
+	    + ballesAAfficher[5] + " "
+	    + ballesAAfficher[6] + " "
+	    + ballesAAfficher[2] + " "
+	    + ballesAAfficher[4]	
+	    		);
 	    
     	Scanner sc = new Scanner(System.in);
 	    for (int i=0;i<6;i++){
@@ -54,19 +57,6 @@ public class Joueur extends CourseObserver
 	            System.out.println(e.getMessage());
 	        }
 	    }
-	    
-	    /*System.out.println("Veuillez saisir un numéro chance entre 1 et 10 :");
-	    int i=0;
-	    while (i==0){
-	        try {
-	            jeu[5] = new Balle(sc.nextInt(), "chance");
-	            i++;
-	            System.out.println("Vous avez saisi : " + jeu[5].getNumero());
-	             
-	        }catch (Exception e){
-	            System.out.println (e.getMessage());
-	        }
-	    }*/
 	    sc.close();
 	    return jeu;
     }

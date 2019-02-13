@@ -41,7 +41,7 @@ public class ConcreteCourseFactory2 extends AbstractCourseFactory{
 	public void jouer() throws Exception {
 		if (course == null ) throw new Exception("Course de chevaux - Aucune course n'a été lancée");
 		if (course == null ) throw new Exception("Course de chevaux - Aucune résultat n'est disponible pour la course");
-		if (participants.size() == 0) throw new Exception ("Course de chevaux - Aucun joueur n'est enregistré");
+		if (participants.size() == 0) throw new Exception ("Course de chevaux - Aucun joueur n'est enregistré sur cette course");
 		
 		for (AbstractJoueur participant : participants ) {
 			System.out.println("Course de chevaux - Votre gain est de : " + course.calculerGain(((Joueur) participant).getJeu()));

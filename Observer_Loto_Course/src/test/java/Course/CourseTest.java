@@ -8,25 +8,14 @@ import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
 public class CourseTest {
-	// Définissez ici les variables d'instance nécessaires à vos engagements;
-	// Vous pouvez également les saisir automatiquement du présentoir
-	// à l'aide du menu contextuel "Présentoir --> Engagements".
-	// Notez cependant que ce dernier ne peut saisir les objets primitifs
-	// du présentoir (les objets sans constructeur, comme int, float, etc.).
+
 	protected Course course1;
 	protected Participant particip1;
 
-	/**
-	 * Constructeur de la classe-test CourseTest
-	 */
+
 	public CourseTest() {
 	}
 
-	/**
-	 * Met en place les engagements.
-	 *
-	 * Méthode appelée avant chaque appel de méthode de test.
-	 */
 	@Before
 	public void setUp() // throws java.lang.Exception
 	{
@@ -34,15 +23,9 @@ public class CourseTest {
 		particip1 = new Participant(course1);
 	}
 
-	/**
-	 * Supprime les engagements
-	 *
-	 * Méthode appelée après chaque appel de méthode de test.
-	 */
 	@After
 	public void tearDown() // throws java.lang.Exception
 	{
-		// Libérez ici les ressources engagées par setUp()
 	}
 
 	@Test
@@ -58,8 +41,6 @@ public class CourseTest {
 		assertEquals(8, particip1.modifierTourCourse(6));
 	}
 
-	// TP2 Couverture de test
-	// Test des Getters
 	@Test
 	public void testGetLieu() {
 		Course course1 = new Course("Paris",2);
@@ -74,7 +55,6 @@ public class CourseTest {
 		Assert.assertNotEquals("Faux", 7, course1.getTour());
 	}
 
-	// Test des Setters
 	@Test
 	public void testSetLieu() {
 		Course course1 = new Course("Paris",2);

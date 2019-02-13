@@ -11,10 +11,11 @@ public class Balle
     public Balle(String type)
     {
         rd  = new Random();
+        
         this.type = type;
         if(type.equals("classique")){
             this.couleur = "rouge";
-            this.numero = rd.nextInt(49)+1;
+            this.numero = rd.nextInt(999)+1;
         }else {
             this.couleur = "rouge";
             this.numero = rd.nextInt(10)+1;
@@ -22,7 +23,7 @@ public class Balle
     }
     
     public Balle(int numero, String type){
-        if (type.equals("classique") && (numero > 49 || numero < 1)) throw new IllegalArgumentException ("Erreur-Veuillez saisir un nombre entre 1 et 49");
+        if (type.equals("classique") && (numero > 999 || numero < 1)) throw new IllegalArgumentException ("Erreur-Veuillez saisir un nombre entre 1 et 999");
         if (type.equals("chance") && (numero > 10 || numero < 1)) throw new IllegalArgumentException ("Erreur-Veuillez saisir un nombre entre 1 et 10");
         this.type = type;
         this.couleur = "rouge";

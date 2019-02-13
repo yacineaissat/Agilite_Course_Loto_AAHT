@@ -16,9 +16,6 @@ public class CourseTest {
 	protected Course course1;
 	protected Participant particip1;
 
-	/**
-	 * Constructeur de la classe-test CourseTest
-	 */
 	public CourseTest() {
 	}
 

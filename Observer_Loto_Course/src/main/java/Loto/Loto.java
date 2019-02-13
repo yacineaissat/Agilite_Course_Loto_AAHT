@@ -29,7 +29,6 @@ public class Loto extends CourseObserver
         return gain;
     }
     
-    
     public Balle[] getTirage()
     {
       
@@ -43,11 +42,9 @@ public class Loto extends CourseObserver
     }
 
 	public void jouer() {
-		// TODO Auto-generated method stub
 		for (int i=0; i<6; i++){
             tirage[i] = new Balle("classique");
         }
-        //tirage[5] = new Balle("chance");
         this.couleur = couleur;
         CourseObserver.coureurs = tirage;
         update(tirage);

@@ -25,7 +25,6 @@ public class Course {
 		this.listeObservateurs.add(co);
 	}
 	
-	
 	public void setLieu(String y) {
 		this.lieu = y;
 	}
@@ -34,7 +33,6 @@ public class Course {
 		return lieu;
 	}
 
-	
 	public void setTour(int y) {
 		this.tour = y;
 	}

@@ -7,12 +7,10 @@ public class Main {
 		Course cs = new Course("Octogone", 5);
 		CourseObserver simulationCourse = new Loto("rouge");
 		CourseObserver joueur = new Joueur();
-		
+
 		simulationCourse.setCourse(cs);
 		cs.addObserver(simulationCourse);
 		cs.addObserver(joueur);
-		cs.jouer();
-			
+		cs.jouer();		
 	}
-	
 }

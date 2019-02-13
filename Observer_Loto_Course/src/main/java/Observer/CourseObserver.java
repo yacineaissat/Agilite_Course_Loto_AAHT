@@ -11,7 +11,7 @@ public abstract class CourseObserver {
 	public void setCourse (Course course) {
 		this.course = course;
 	}
-	
+
 	public void update( Balle [] resultatCourse) {
 		this.course.setResultat(resultatCourse);
 	}

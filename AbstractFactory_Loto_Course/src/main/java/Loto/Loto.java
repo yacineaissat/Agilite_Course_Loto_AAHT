@@ -1,5 +1,7 @@
 package Loto;
 
+import java.util.Collections;
+
 public class Loto extends AbstractJoueur
 {
     private Balle [] tirage = new Balle[6];
@@ -14,7 +16,6 @@ public class Loto extends AbstractJoueur
         this.couleur = couleur;
     }
 
-   
     public int calculerGain(Balle [] jeu)
     {
     	int gain = 0;
@@ -28,22 +29,19 @@ public class Loto extends AbstractJoueur
     }
     
     public void afficherCoureurs() {
-    	String s = "La liste des courreurs est ";
+    	String s = "La liste des coureurs est ";
     	
-    	for (Balle balle : tirage) {
-    		s += balle.getNumero()+ " ";
-    	}
+    	s += tirage[1].getNumero()+ " "+
+    	tirage[3].getNumero()+ " "+
+    	tirage[0].getNumero()+ " "+
+    	tirage[4].getNumero()+ " "+
+    	tirage[5].getNumero()+ " "+
+    	tirage[2].getNumero()+ " ";
+    	
+    	
 
     	System.out.println(s);
     }
-    
-    /*private boolean evaluer(Balle[] jeu){
-        for (int i=0; i<6; i++){
-            if (! jeu[i].equals(tirage[i])) return false;
-        }
-        return true;
-    }*/
-    
     
     public Balle[] getTirage()
     {
